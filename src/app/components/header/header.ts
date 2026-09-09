@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-header',
-  styleUrl: './header.css',
+  standalone: true,
   templateUrl: './header.html',
+  styleUrls: ['./header.css']
 })
-export class Header {}
+export class HeaderComponent { }

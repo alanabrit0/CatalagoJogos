@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [],
-  selector: 'app-card',
-  styleUrl: './card.css',
+  selector: 'app-game-card',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './card.html',
+  styleUrls: ['./card.css']
 })
-export class Card {}
+export class GameCardComponent {
+  @Input() game: any; // receberá o jogo do pai
+}

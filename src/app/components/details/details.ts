@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [],
-  selector: 'app-details',
-  styleUrl: './details.css',
+  selector: 'app-game-details',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './details.html',
+  styleUrls: ['./details.css']
 })
-export class Details {}
+export class GameDetailsComponent {
+  @Input() game: any;
+}
