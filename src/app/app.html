@@ -3,6 +3,13 @@
   (loginToggle)="toggleLogin()">
 </app-header>
 <main>
+  <section class="welcome-message">
+    @if (usuarioLogado) {
+      <p class="success">Bem-vindo, usuário! Você está logado.</p>
+    } @else {
+      <p class="alert">Você está visitando como convidado. Faça login para mais recursos.</p>
+    }
+  </section>
   <app-list 
     [produtos]="produtos" 
     (favoritar)="toggleFavorito($event)">
