@@ -12,44 +12,43 @@ import { FooterComponent } from './components/footer/footer';
   styleUrls: ['./app.css']
 })
 export class App {
-  title = 'Vaguinha - Catálogo';
+  title = 'Vaguinha - Catálogo de Jogos';
   usuarioLogado = false;
-  produtos = 
-[
+  jogos = [
     {
       id: 1,
-      nome: 'Notebook Ultra',
-      imagem: 'https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Notebook',
-      descricao: 'Notebook com processador i7, 16GB RAM e SSD 512GB.',
+      nome: 'The Witcher 3: Wild Hunt',
+      imagem: 'https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Witcher+3',
+      descricao: 'RPG de mundo aberto com uma história épica e decisões impactantes.',
       disponivel: true,
-      nota: 4.8,
+      nota: 9.5,
       favorito: false
     },
     {
       id: 2,
-      nome: 'Smartphone X',
-      imagem: 'https://via.placeholder.com/300x200/2d2d44/ffffff?text=Smartphone',
-      descricao: 'Smartphone com tela 6.5", câmera tripla e bateria de 5000mAh.',
+      nome: 'Cyberpunk 2077',
+      imagem: 'https://via.placeholder.com/300x200/2d2d44/ffffff?text=Cyberpunk',
+      descricao: 'Futuro distópico em Night City, com liberdade para escolher seu caminho.',
       disponivel: false,
-      nota: 4.2,
+      nota: 7.2,
       favorito: false
     },
     {
       id: 3,
-      nome: 'Fone Bluetooth',
-      imagem: 'https://via.placeholder.com/300x200/3a3a5c/ffffff?text=Fone',
-      descricao: 'Fone de ouvido sem fio com cancelamento de ruído.',
+      nome: 'Hollow Knight',
+      imagem: 'https://via.placeholder.com/300x200/3a3a5c/ffffff?text=Hollow+Knight',
+      descricao: 'Metroidvania desafiador com arte deslumbrante e trilha sonora envolvente.',
       disponivel: true,
-      nota: 4.5,
+      nota: 9.0,
       favorito: false
     }
-  ];;
+  ];
 
   toggleLogin() {
     this.usuarioLogado = !this.usuarioLogado;
   }
 
-  toggleFavorito(produto: any) {
-    produto.favorito = !produto.favorito;
+  toggleFavorito(jogo: any) {
+    jogo.favorito = !jogo.favorito;
   }
 }
