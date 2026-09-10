@@ -8,3 +8,8 @@ body {
   background-color: #f0f2f5;
   color: #333;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+}

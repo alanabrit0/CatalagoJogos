@@ -1,3 +1,12 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+} 
 .welcome-message {
   max-width: 1200px;
   margin: 1rem auto;
@@ -16,4 +25,29 @@
   padding: 0.75rem;
   border-radius: 4px;
   border-left: 4px solid #ffc107;
+}
+.secao-inicio,
+.secao-sobre {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.secao-inicio h2,
+.secao-sobre h2 {
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #f39c12;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.secao-inicio p,
+.secao-sobre p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
 }

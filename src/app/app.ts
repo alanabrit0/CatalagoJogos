@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer';
 export class App {
   title = 'Catálogo de Jogos';
   usuarioLogado = false;
+  secaoAtiva: string = 'catalogo';
 
   jogos = [
     {
@@ -71,6 +72,10 @@ export class App {
       favorito: false
     }
   ];
+
+  mudarSecao(secao: string) {
+    this.secaoAtiva = secao;
+  }
 
   toggleLogin() {
     this.usuarioLogado = !this.usuarioLogado;

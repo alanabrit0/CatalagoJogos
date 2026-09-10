@@ -8,9 +8,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() usuarioLogado = false;
+  @Input() secaoAtiva = 'inicio';
   @Output() loginToggle = new EventEmitter<void>();
+  @Output() navegar = new EventEmitter<string>();
 
   onLoginToggle() {
     this.loginToggle.emit();
+  }
+
+  onNavegar(secao: string) {
+    this.navegar.emit(secao);
   }
 }

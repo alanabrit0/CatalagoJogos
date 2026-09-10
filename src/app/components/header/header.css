@@ -51,3 +51,7 @@ nav a:hover {
 .btn-login:hover {
   background: #e67e22;
 }
+nav a.ativo {
+  color: #f39c12;
+  border-bottom: 2px solid #f39c12;
+}

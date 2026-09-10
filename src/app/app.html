@@ -1,18 +1,50 @@
-<app-header 
-  [usuarioLogado]="usuarioLogado" 
-  (loginToggle)="toggleLogin()">
-</app-header>
-<main>
-  <section class="welcome-message">
-    @if (usuarioLogado) {
-      <p class="success">Bem-vindo, usuário! Você está logado.</p>
-    } @else {
-      <p class="alert">Você está visitando como convidado. Faça login para mais recursos.</p>
+<div class="app-container">
+  <app-header 
+    [usuarioLogado]="usuarioLogado" 
+    [secaoAtiva]="secaoAtiva"
+    (loginToggle)="toggleLogin()"
+    (navegar)="mudarSecao($event)">
+  </app-header>
+
+  <main>
+    <section class="welcome-message">
+      @if (usuarioLogado) {
+        <p class="success">Bem-vindo, usuário! Você está logado.</p>
+      } @else {
+        <p class="alert">Você está visitando como convidado. Faça login para mais recursos.</p>
+      }
+    </section>
+
+    @if (secaoAtiva === 'inicio') {
+      <section class="secao-inicio">
+        <h2>Bem-vindo</h2>
+        <p>O melhor catálogo de jogos para você explorar, favoritar e descobrir novos títulos.</p>
+        <p>Use o menu acima para navegar entre as seções.</p>
+      </section>
     }
-  </section>
-  <app-list 
-    [jogos]="jogos" 
-    (favoritar)="toggleFavorito($event)">
-  </app-list>
-</main>
-<app-footer></app-footer>
+
+    @if (secaoAtiva === 'catalogo') {
+      <app-list 
+        [jogos]="jogos" 
+        (favoritar)="toggleFavorito($event)">
+      </app-list>
+    }
+
+    @if (secaoAtiva === 'sobre') {
+      <section class="secao-sobre">
+        <h2>Sobre o projeto</h2>
+        <p>
+          O Catálogo de Jogos é uma aplicação desenvolvida em Angular como atividade prática,
+          com o objetivo de exercitar componentes, interpolação, property binding,
+          event binding e diretivas condicionais.
+        </p>
+        <p>
+          Aqui você pode visualizar jogos, marcar favoritos, ver detalhes e
+          simular login/logout.
+        </p>
+      </section>
+    }
+  </main>
+
+  <app-footer></app-footer>
+</div>
