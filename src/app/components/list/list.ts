@@ -10,10 +10,10 @@ import { CardComponent } from '../card/card';
   styleUrls: ['./list.css']
 })
 export class ListComponent {
-  @Input() produtos: any[] = [];
+  @Input() jogos: any[] = [];
   @Output() favoritar = new EventEmitter<any>();
 
-  onFavoritar(produto: any) {
-    this.favoritar.emit(produto);
+  onFavoritar(jogo: any) {
+    this.favoritar.emit(jogo);
   }
 }
