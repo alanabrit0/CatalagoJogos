@@ -3,7 +3,7 @@
   <h3>{{ item.nome }}</h3>
   <p class="nota">Nota: {{ item.nota }}</p>
   <p class="status" [class.disponivel]="item.disponivel" [class.indisponivel]="!item.disponivel">
-    {{ item.disponivel ? '✅ Disponível' : ' Indisponível' }}
+    {{ item.disponivel ? 'Disponível' : ' Indisponível' }}
   </p>
   <button [disabled]="isIndisponivel()" class="btn-comprar">
     {{ item.disponivel ? 'Comprar' : 'Indisponível' }}
