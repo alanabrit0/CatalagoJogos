@@ -3,9 +3,22 @@
   <h3>{{ item.nome }}</h3>
   <p class="nota">Nota: {{ item.nota }}</p>
   <p class="status" [class.disponivel]="item.disponivel" [class.indisponivel]="!item.disponivel">
-    {{ item.disponivel ? 'Disponível' : ' Indisponível' }}
+    {{ item.disponivel ? ' Disponível' : ' Indisponível' }}
   </p>
-  <button [disabled]="isIndisponivel()" class="btn-comprar">
-    {{ item.disponivel ? 'Comprar' : 'Indisponível' }}
-  </button>
+  <div class="card-actions">
+    <button (click)="toggleDetalhes()" class="btn-detalhes">
+      {{ mostrarDetalhes ? 'Ocultar detalhes' : 'Ver detalhes' }}
+    </button>
+    <button (click)="onFavoritar()" class="btn-favorito">
+      {{ item.favorito ? ' Favorito' : '☆ Favoritar' }}
+    </button>
+    <button [disabled]="isIndisponivel()" class="btn-comprar">
+      {{ item.disponivel ? 'Comprar' : 'Indisponível' }}
+    </button>
+  </div>
+  @if (mostrarDetalhes) {
+    <div class="detalhes">
+      <p>{{ item.descricao }}</p>
+    </div>
+  }
 </article>

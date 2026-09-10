@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrls: ['./header.css']
 })
-export class HeaderComponent { }
+export class HeaderComponent {
+  @Input() usuarioLogado = false;
+  @Output() loginToggle = new EventEmitter<void>();
+
+  onLoginToggle() {
+    this.loginToggle.emit();
+  }
+}

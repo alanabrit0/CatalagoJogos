@@ -1,10 +1,20 @@
 <header>
   <div class="logo">
-    <h1>Jogos</h1>
+    <h1>Catálago</h1>
   </div>
   <nav>
     <a href="#">Início</a>
     <a href="#">Catálogo</a>
     <a href="#">Sobre</a>
+    <div class="login-area">
+      @if (usuarioLogado) {
+        <span class="user-status">Logado</span>
+      } @else {
+        <span class="user-status">Visitante</span>
+      }
+      <button (click)="onLoginToggle()" class="btn-login">
+        {{ usuarioLogado ? 'Sair' : 'Entrar' }}
+      </button>
+    </div>
   </nav>
 </header>

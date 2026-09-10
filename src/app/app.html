@@ -1,5 +1,11 @@
-<app-header></app-header>
+<app-header 
+  [usuarioLogado]="usuarioLogado" 
+  (loginToggle)="toggleLogin()">
+</app-header>
 <main>
-  <app-list [produtos]="produtos"></app-list>
+  <app-list 
+    [produtos]="produtos" 
+    (favoritar)="toggleFavorito($event)">
+  </app-list>
 </main>
 <app-footer></app-footer>

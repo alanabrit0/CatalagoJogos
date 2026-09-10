@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,17 @@ import { CommonModule } from '@angular/common';
 })
 export class CardComponent {
   @Input() item: any;
+  @Output() favoritar = new EventEmitter<any>();
+
+  mostrarDetalhes = false;
+
+  toggleDetalhes() {
+    this.mostrarDetalhes = !this.mostrarDetalhes;
+  }
+
+  onFavoritar() {
+    this.favoritar.emit(this.item);
+  }
 
   isIndisponivel(): boolean {
     return !this.item?.disponivel;

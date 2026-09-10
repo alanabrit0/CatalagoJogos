@@ -13,7 +13,9 @@ import { FooterComponent } from './components/footer/footer';
 })
 export class App {
   title = 'Vaguinha - Catálogo';
-  produtos = [
+  usuarioLogado = false;
+  produtos = 
+[
     {
       id: 1,
       nome: 'Notebook Ultra',
@@ -41,5 +43,13 @@ export class App {
       nota: 4.5,
       favorito: false
     }
-  ];
+  ];;
+
+  toggleLogin() {
+    this.usuarioLogado = !this.usuarioLogado;
+  }
+
+  toggleFavorito(produto: any) {
+    produto.favorito = !produto.favorito;
+  }
 }

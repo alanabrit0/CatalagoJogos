@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card';
 
@@ -11,4 +11,9 @@ import { CardComponent } from '../card/card';
 })
 export class ListComponent {
   @Input() produtos: any[] = [];
+  @Output() favoritar = new EventEmitter<any>();
+
+  onFavoritar(produto: any) {
+    this.favoritar.emit(produto);
+  }
 }
