@@ -1,5 +1,10 @@
-<section class="game-list">
-  <h2>Catálogo de Jogos</h2>
-  <div class="games-grid">
+<section class="list">
+  <h2>Catálogo de Produtos</h2>
+  <div class="items-grid">
+    @for (produto of produtos; track produto.id) {
+      <app-card [item]="produto"></app-card>
+    } @empty {
+      <p>Nenhum produto disponível no momento.</p>
+    }
   </div>
 </section>

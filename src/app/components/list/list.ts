@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameCardComponents } from '../card/card.components';
+import { CardComponent } from '../card/card';
 
 @Component({
-  selector: 'app-game-list',
+  selector: 'app-list',
   standalone: true,
-  imports: [CommonModule, GameCardComponents],
+  imports: [CommonModule, CardComponent],
   templateUrl: './list.html',
   styleUrls: ['./list.css']
 })
-export class GameListComponent {
-  // dados serão adicionados depois
+export class ListComponent {
+  @Input() produtos: any[] = [];
 }
