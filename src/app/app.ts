@@ -12,14 +12,14 @@ import { FooterComponent } from './components/footer/footer';
   styleUrls: ['./app.css']
 })
 export class App {
-  title = 'Vaguinha - Catálogo de Jogos';
+  title = 'Catálogo de Jogos';
   usuarioLogado = false;
 
   jogos = [
     {
       id: 1,
       nome: 'Minecraft',
-      imagem: 'https://via.placeholder.com/300x200/1a1a2e/ffffff?text=Minecraft',
+      imagem: '/imagens/minecraft.jpg',
       descricao: 'Jogo de construção e sobrevivência em mundo aberto com blocos infinitos.',
       disponivel: true,
       nota: 9.0,
@@ -28,7 +28,7 @@ export class App {
     {
       id: 2,
       nome: 'Free Fire',
-      imagem: 'https://via.placeholder.com/300x200/2d2d44/ffffff?text=Free+Fire',
+      imagem: '/imagens/ff.jpg',
       descricao: 'Battle royale mobile com partidas rápidas e personagens únicos.',
       disponivel: true,
       nota: 8.5,
@@ -37,7 +37,7 @@ export class App {
     {
       id: 3,
       nome: 'Fortnite',
-      imagem: 'https://via.placeholder.com/300x200/3a3a5c/ffffff?text=Fortnite',
+      imagem: '/imagens/fortnite.jpg',
       descricao: 'Battle royale com construção, eventos ao vivo e modos criativos.',
       disponivel: false,
       nota: 8.8,
@@ -46,7 +46,7 @@ export class App {
     {
       id: 4,
       nome: 'Clash Royale',
-      imagem: 'https://via.placeholder.com/300x200/4a4a6c/ffffff?text=Clash+Royale',
+      imagem: '/imagens/clash.png',
       descricao: 'Jogo de estratégia em tempo real com cartas e batalhas de arena.',
       disponivel: true,
       nota: 8.2,
@@ -55,7 +55,7 @@ export class App {
     {
       id: 5,
       nome: 'Call of Duty',
-      imagem: 'https://via.placeholder.com/300x200/5a5a7c/ffffff?text=Call+of+Duty',
+      imagem: '/imagens/cs.png',
       descricao: 'FPS de guerra com campanhas intensas e multiplayer competitivo.',
       disponivel: true,
       nota: 9.2,
@@ -64,7 +64,7 @@ export class App {
     {
       id: 6,
       nome: 'Subway Surf',
-      imagem: 'https://via.placeholder.com/300x200/6a6a8c/ffffff?text=Subway+Surf',
+      imagem: '/imagens/subway.avif',
       descricao: 'Corrida infinita desviando de obstáculos e coletando moedas.',
       disponivel: false,
       nota: 7.8,
