@@ -26,4 +26,4 @@ O projeto tem como objetivo praticar conceitos de desenvolvimento front-end e ex
 4. Acesse `http://localhost:4200`.
 
 ## Vídeo
-Link do vídeo:
+Link do vídeo: https://youtu.be/Lb1fYkxran4?is=cLtnorsekZDu5P2S
